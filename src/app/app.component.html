@@ -1,0 +1,18 @@
+<!-- main container -->
+<main>
+  <!-- navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" [routerLink]="['classificacao']" ><i class="fa fa-sitemap"></i> Tabela</a></li>
+      <li><a href="#" [routerLink]="['lances']" ><i class="fa fa-check-square-o"></i> Lances</a></li> 
+      <li><a href="#" [routerLink]="['jogos']" ><i class="fa fa-gamepad"></i> Jogos</a></li>
+      <li><a href="#" [routerLink]="['times']" ><i class="fa fa-flag"></i> Times</a></li>              
+      <li><a href="#" [routerLink]="['sobre']" ><i class="fa fa-info"></i> Sobre</a></li>
+    </ul>
+  </nav>
+  <!-- navbar -->
+</main>
+
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<router-outlet></router-outlet>

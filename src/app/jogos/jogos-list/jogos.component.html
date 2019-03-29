@@ -1,0 +1,48 @@
+<app-jogos-form (refresh)="refresh($event)"></app-jogos-form>
+<br>
+<div class="container">
+    <div class="jogos-restantes">
+        Jogos restantes: <b>{{jogosRestantes}}</b>
+    </div>
+    <p-dataView [value]="jogos" [paginator]="true" [rows]="3" emptyMessage="Nenhum jogo registrado">
+        <ng-template let-jogo pTemplate="listItem">
+
+            <div class="row" style="display: block;">
+                <div class="center">
+                    <b style="font-size: 16px;"> {{ jogo.data | date:'dd/MM/yyyy' }} </b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col center">
+                    <img [src]="jogo.timeA.urlImagem" style="max-width: 90px;">
+                    <br>
+                </div>
+                <div class="col versus">
+                    <p-spinner class="input-placar" size="3" [min]="0" [max]="20" [(ngModel)]="jogo.golsA"></p-spinner>
+                    <span>X</span>
+                    <p-spinner class="input-placar" size="3" [min]="0" [max]="20" [(ngModel)]="jogo.golsB"></p-spinner>
+                </div>
+                <div class="col center">
+                    <img [src]="jogo.timeB.urlImagem" style="max-width: 90px;">
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col center">
+                    {{ jogo.timeA.nome | uppercase}}
+                </div>
+                <div class="col center"></div>
+                <div class="col center">
+                    {{ jogo.timeB.nome | uppercase }}
+                </div>
+            </div>
+
+        </ng-template>
+    </p-dataView>
+
+    <div>
+        <button (click)="salvar()" type="submit" class="btn btn-primary btn-block center" style="margin-top: 20px;">
+            Salvar
+        </button>
+    </div>
+</div>

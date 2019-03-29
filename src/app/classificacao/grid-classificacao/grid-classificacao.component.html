@@ -1,0 +1,29 @@
+<div class="container">
+    <br>
+    <p-table #dt [columns]="cols" [value]="ranking" [paginator]="true" [rows]="10">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                </th>
+            </tr>
+            <tr>
+                <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                    <input *ngSwitchCase="'jogador'" pInputText type="text" style="width: 100%"
+                        (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData" [ngClass]="{'ouro': rowData.posicao === 1,
+                                                       'prata': rowData.posicao === 2,
+                                                       'bronze': rowData.posicao === 3}" >
+                <td *ngFor="let col of columns">
+                    {{rowData[col.field]}}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+</div>

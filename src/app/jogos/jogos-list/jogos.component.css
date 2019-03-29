@@ -1,0 +1,21 @@
+.versus{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 28px;
+}
+
+.center {
+    text-align: center;
+}
+
+.input-placar {
+    width: 50px;
+    margin: 10px;
+}
+
+.jogos-restantes{
+    text-align: right;
+    margin-bottom: 20px;    
+    margin-right: 5px;
+    color: #327ad9;
+}

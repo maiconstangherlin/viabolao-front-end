@@ -1,0 +1,18 @@
+.center {
+    text-align: center;
+}
+
+.versus {
+    text-align: center;
+    font-weight: bold;
+}
+
+.lance{
+    max-width: 30px;
+    margin: 10px;
+}
+
+.ultima-atualizacao {
+    text-align: center;
+    font-size: 10px;
+}

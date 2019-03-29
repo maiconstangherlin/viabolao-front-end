@@ -1,0 +1,23 @@
+<div class="container" style="margin-top: 20px;">
+  <p-accordion>
+    <p-accordionTab header="Filtrar Lances" [selected]="true">
+      <form [formGroup]="lanceForm">
+        <div class="row mt-10">
+          <div class="col">
+            <span class="ui-float-label">
+              <input formControlName="jogador" name="jogador" id="float-input" type="text" style="width: 100%"
+                pInputText [(ngModel)]="jogador" (keydown)="alterouJogador()">
+              <label for="float-input">Nome</label>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <button [disabled]="lanceForm.invalid" (click)="filtrar()" type="submit"
+            class="btn btn-primary btn-block center" style="margin-top: 20px;">
+            Buscar
+          </button>
+        </div>
+      </form>
+    </p-accordionTab>
+  </p-accordion>
+</div>

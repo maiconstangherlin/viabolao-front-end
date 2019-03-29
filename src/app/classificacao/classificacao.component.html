@@ -1,0 +1,17 @@
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col" *ngIf="classificacao?.lideres[0]" style="margin-left: 45px;">
+            <app-lideres posicao="1" [jogador]="classificacao?.lideres[0].jogador"></app-lideres>
+        </div>
+
+        <div class="col" *ngIf="classificacao?.lideres[1]">
+            <app-lideres posicao="2" [jogador]="classificacao?.lideres[1].jogador"></app-lideres>
+        </div>
+
+        <div class="col" *ngIf="classificacao?.lideres[2]">
+            <app-lideres posicao="3" [jogador]="classificacao?.lideres[2].jogador"></app-lideres>
+        </div>
+    </div>
+</div>
+
+<app-grid-classificacao *ngIf="classificacao?.ranking[0]"></app-grid-classificacao>

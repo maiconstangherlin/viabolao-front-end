@@ -1,0 +1,12 @@
+.center {
+    text-align: center;
+}
+
+.image-medal {
+    max-width: 80px;
+}
+
+.nome{
+    font-size: 20px;
+    font-weight: bold;
+}
