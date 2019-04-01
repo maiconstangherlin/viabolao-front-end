@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
@@ -25,9 +25,10 @@ export class JogosService {
 
     remove(id: number) {
         return this.http.delete<boolean>(API + 'jogo/' + id);
+
     }
 
-    updateList(jogos: Jogo[]) {
+    updateList(jogos: Jogo[]): Observable<boolean> {
         return this.http.put<boolean>(API + 'jogo/', jogos);
     }
 }

@@ -2,7 +2,7 @@
 <br>
 <div class="container">
     <div class="jogos-restantes">
-        Jogos restantes: <b>{{jogosRestantes}}</b>
+        <b>{{jogosRestantes}}</b> jogos para o término do campeonato
     </div>
     <p-dataView [value]="jogos" [paginator]="true" [rows]="3" emptyMessage="Nenhum jogo registrado">
         <ng-template let-jogo pTemplate="listItem">
