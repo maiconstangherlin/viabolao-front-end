@@ -1,8 +1,14 @@
 .versus{
     text-align: center;
-    font-size: 25px;
-    margin-top: 28px;
+    font-size: 25px; 
 }
+
+@media screen and (min-width: 992px) {
+    .versus{
+        margin-top: 28px;               
+    }
+  }
+
 
 .center {
     text-align: center;

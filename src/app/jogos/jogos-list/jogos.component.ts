@@ -14,7 +14,7 @@ export class JogosComponent implements OnInit {
   jogosRestantes: number;
 
   constructor(private jogosService: JogosService,
-              private messageService: MessageService) { }
+    private messageService: MessageService) { }
 
   ngOnInit() {
     this.loadJogos();
@@ -33,9 +33,8 @@ export class JogosComponent implements OnInit {
       .subscribe((num) => this.jogosRestantes = num);
   }
 
-  salvar(){    
-    this.jogosService.updateList(this.jogos).subscribe(() => 
-        this.messageService.add({ severity: 'success', summary: 'Salvo!', detail: 'Resultados registrados com sucesso.' }));
-    console.log(this.jogos);
+  salvar() {
+    this.jogosService.updateList(this.jogos).subscribe(() =>
+      this.messageService.add({ severity: 'success', summary: 'Salvo!', detail: 'Resultados registrados com sucesso.' }));
   }
 }

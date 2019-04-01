@@ -41,6 +41,12 @@ main {
 	position: relative;
 }
 
+@media screen and (max-width: 600px) {
+	.navbar>ul li a {
+		width: 110px;
+	}
+}
+
 .navbar>ul li a::before {
 	background: #fff none repeat scroll 0 0;
 	bottom: -2px;
@@ -56,7 +62,6 @@ main {
 	width: 100%;
 }
 
-.clicado{
+.clicado {
 	background-color: #ffffff3d;
 }
-

@@ -2,7 +2,7 @@
 <br>
 <div class="container">
     <div class="jogos-restantes">
-        <b>{{jogosRestantes}}</b> jogos para o término do campeonato
+        Jogos para o término do campeonato: <b>{{jogosRestantes}}</b>
     </div>
     <p-dataView [value]="jogos" [paginator]="true" [rows]="3" emptyMessage="Nenhum jogo registrado">
         <ng-template let-jogo pTemplate="listItem">
@@ -12,31 +12,33 @@
                     <b style="font-size: 16px;"> {{ jogo.data | date:'dd/MM/yyyy' }} </b>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col center">
-                    <img [src]="jogo.timeA.urlImagem" style="max-width: 90px;">
+                    <img [src]="jogo.timeA.urlImagem" style="max-width: 90px;">                    
                     <br>
+                    {{ jogo.timeA.nome | uppercase}}
                 </div>
-                <div class="col versus">
-                    <p-spinner class="input-placar" size="3" [min]="0" [max]="20" [(ngModel)]="jogo.golsA"></p-spinner>
-                    <span>X</span>
-                    <p-spinner class="input-placar" size="3" [min]="0" [max]="20" [(ngModel)]="jogo.golsB"></p-spinner>
+                <div class="col-4 versus">                 
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-4">
+                            <p-spinner class="input-placar" size="1" [min]="0" [max]="20" [(ngModel)]="jogo.golsA">
+                            </p-spinner>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-4">
+                            <span>X</span>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-4">
+                            <p-spinner class="input-placar" size="1" [min]="0" [max]="20" [(ngModel)]="jogo.golsB">
+                            </p-spinner>
+                        </div>
+                    </div>
                 </div>
                 <div class="col center">
                     <img [src]="jogo.timeB.urlImagem" style="max-width: 90px;">
                     <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col center">
-                    {{ jogo.timeA.nome | uppercase}}
-                </div>
-                <div class="col center"></div>
-                <div class="col center">
                     {{ jogo.timeB.nome | uppercase }}
                 </div>
-            </div>
-
+            </div>           
         </ng-template>
     </p-dataView>
 

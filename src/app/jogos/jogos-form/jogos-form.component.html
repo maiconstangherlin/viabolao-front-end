@@ -3,7 +3,7 @@
     <p-accordionTab header="Novo jogo" [selected]="false">
       <form [formGroup]="jogoForm" (submit)="cadastrar()" >
         <div class="row">
-          <div class="col center">
+          <div class="col-md-12 center">
             <label>Data da partida</label>
             <br>
             <p-calendar formControlName="data" name="dataJogo" [locale]="es" dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
@@ -11,9 +11,8 @@
         </div>
         <br>
         <div class="row">
-          <div class="col">
-            <label>Casa</label>
-            <!-- <input type="text" class="form-control"> -->
+          <div class="col-lg-5 col-md-12 col-sm-12 center">
+            <label>Casa</label>            
             <br>
             <p-autoComplete formControlName="equipeA" name="equipeCasa" [(ngModel)]="timeCasa" [suggestions]="timesCasaFiltrados"
               (completeMethod)="filtrarTimesCasa($event)" [size]="30" [minLength]="1" placeholder="Selecione a equipe"
@@ -26,15 +25,15 @@
                 </div>
               </ng-template>
             </p-autoComplete>
-
           </div>
-          <div class="col versus">
+
+          <div class="col-lg-2 col-md-12 col-sm-12 versus">
             <span>X</span>
           </div>
-          <div class="col">
-            <label>Visitante</label>
-            <!-- <input type="text" class="form-control"> -->
 
+          <div class="col-lg-5 col-md-12 col-sm-12 center">
+            <label>Visitante</label>
+            <br>
             <p-autoComplete formControlName="equipeB" name="equipeCasa" [(ngModel)]="timeVisitante" [suggestions]="timesVisitanteFiltrados"
               (completeMethod)="filtrarTimesVisitante($event)" [size]="30" [minLength]="1"
               placeholder="Selecione a equipe" [dropdown]="true" field="nome">

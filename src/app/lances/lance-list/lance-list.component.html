@@ -32,11 +32,11 @@
                 </td>
                 <td>
                     <div class="versus">
-                        <input type="text" pKeyFilter="int" class="lance" [(ngModel)]="lance.golsA" maxlength="2" [disabled]="(lance.jogo.golsA || lance.jogo.golsA == 0)"
-                            (change)="salvaLance(lance)">                
+                        <input type="text" pKeyFilter="int" class="lance" [(ngModel)]="lance.golsA" maxlength="2"
+                            [disabled]="(lance.jogo.golsA || lance.jogo.golsA == 0)" (change)="salvaLance(lance)">
                         <span>VS</span>
-                        <input type="text" pKeyFilter="int" class="lance" [(ngModel)]="lance.golsB" maxlength="2" [disabled]="(lance.jogo.golsB || lance.jogo.golsB == 0)"
-                             (change)="salvaLance(lance)">                 
+                        <input type="text" pKeyFilter="int" class="lance" [(ngModel)]="lance.golsB" maxlength="2"
+                            [disabled]="(lance.jogo.golsB || lance.jogo.golsB == 0)" (change)="salvaLance(lance)">
                     </div>
                     <div class="ultima-atualizacao" *ngIf="lance.lanceDetail">
                         <i class="fa fa-cloud-upload"></i>

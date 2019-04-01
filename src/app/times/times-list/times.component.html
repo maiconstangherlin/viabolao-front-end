@@ -11,7 +11,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let time of times">
-        <td class="center"><img class="img-thumbnail" class="escudo-time" [src]="time.urlImagem"></td>
+        <td class="center">
+          <img class="img-thumbnail" class="escudo-time" [src]="time.urlImagem">
+        </td>
         <td class="td-vertial-center">{{time.nome}}</td>
         <td class="td-vertial-center center">
           <a (click)="remove(time.id)"><i class="fa fa-trash-o fa-lg"></i></a>
